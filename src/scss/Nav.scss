@@ -1,0 +1,32 @@
+@import 'variables';
+
+.nav-main {
+    @include heading-styles;
+    text-align: right;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: 15px 10px;
+            &.active {
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+    .nav-main {
+        background: $red;
+        padding: 5px;
+        color: #fff;
+        text-align: left;
+        ul {            
+            li {
+                display: inline;
+                padding: 0 25px 0 0;
+            }
+        }
+    }
+}

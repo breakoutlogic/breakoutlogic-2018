@@ -1,0 +1,21 @@
+$site-padding: 14px;
+$footer-padding: 30px;
+$header-padding: 30px;
+$footer-font-size: 14px;
+$footer-line-height: 14px;
+$font-stack: "Segoe UI", "Roboto", "San Francisco", "Helvetica Neue", Arial, sans-serif;
+$font-size: 18px;
+$grey: #4c4c4c;
+$light-grey: #cecece;
+$red: #f55649;
+$transition-duration: .1s;
+$nav-width: 250px;
+$container-width: 1080px;
+$mobile-breakpoint: 768px;
+
+@mixin heading-styles {
+    font-family: "Josefin Sans", $font-stack;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $red;
+}

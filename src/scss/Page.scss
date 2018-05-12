@@ -1,0 +1,11 @@
+@import "variables";
+
+.page {
+    min-height: 380px;
+    opacity: 0;
+    transition: opacity $transition-duration ease-in;
+}
+
+.page.loaded {
+    opacity: 1;
+}

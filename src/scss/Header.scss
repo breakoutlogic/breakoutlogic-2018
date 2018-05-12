@@ -1,0 +1,28 @@
+@import 'variables';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    h1 {
+      margin: 0;
+      padding: 0;
+      line-height: 1em;
+    }
+    .icon {
+        font-size: 2em;
+        color: $red;
+        line-height: 1em;
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+    .header {
+        h1 {
+            order: 1;
+        }
+        .icon {
+            order: 2;
+        }
+    }
+}

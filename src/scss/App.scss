@@ -1,0 +1,83 @@
+@import "variables";
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Titillium+Web:300,400,400i,600,700');
+
+body, div, p {
+    position: relative;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $font-stack;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $grey;
+}
+
+
+h1, h2, h3, h4, h5 {
+    @include heading-styles;
+}
+
+a, a:visited, .clickable {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+code {
+    padding: 1px;
+    background: lighten($light-grey, 10%);
+    color: $red;
+}
+#bl-root {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.wrap {
+    max-width: $container-width;
+    padding: 0 $site-padding;
+    margin: 0 auto;
+    border-bottom: 1px solid $light-grey;
+}
+
+.header {
+    border-bottom: 1px solid $light-grey;
+    padding: $header-padding 0;
+}
+
+.body {
+    display: flex;
+    padding: $site-padding 0;
+    flex-direction: row;
+    .nav-main {
+        order: 2;
+        flex: 0 0 $nav-width;
+    }
+    .main {
+        order: 1;
+        flex: 1 1 auto;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+    .body {
+        padding-top: 0;
+        padding-bottom: 0;
+        flex-direction: column;
+        .nav-main {
+            order: 1;
+            flex: 1 1 auto;
+        }
+        .main {
+            order: 2;
+            flex: 1 1 auto;
+        }
+    }
+}

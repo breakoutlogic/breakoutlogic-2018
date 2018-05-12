@@ -1,0 +1,18 @@
+@import 'variables';
+
+footer {
+    padding: $footer-padding 0;
+    position: relative;
+    text-align: center;
+    font-size: $footer-font-size;
+    line-height: $footer-line-height;
+    span, a {
+        &:after {
+            content: '';
+            padding: 1em;
+        }
+        &:last-child:after {
+            padding: 0;
+        }
+    }
+}
